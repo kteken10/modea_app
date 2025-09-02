@@ -68,7 +68,7 @@ flutter run
 
 <p align="center">
   <kbd>
-    <img src="assets/screens/onboarding.gif" width="280" />
+    <img src="https://github.com/user-attachments/assets/00dda18f-eaa0-4449-aeac-be1bc5a1ed5a" width="280" />
     <br><em>Onboarding</em>
   </kbd>
   &nbsp;&nbsp;&nbsp;
