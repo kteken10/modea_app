@@ -80,14 +80,14 @@ flutter run
 
 <p align="center">
   <kbd>
-    <img src="assets/screens/details.png" width="280" />
-    <br><em>Product Detail View</em>
+    <img src="https://github.com/user-attachments/assets/1b92135e-91a7-4ac3-b7d6-a227a8fc753b" width="280" />
+    <br><em>Auth Screen</em>
   </kbd>
   &nbsp;&nbsp;&nbsp;
-  <kbd>
+<!--   <kbd>
     <img src="assets/screens/auth.png" width="280" />
     <br><em>Login & Registration</em>
-  </kbd>
+  </kbd> -->
 </p>
 
 ---
