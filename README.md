@@ -73,7 +73,7 @@ flutter run
   </kbd>
   &nbsp;&nbsp;&nbsp;
   <kbd>
-    <img src="assets/screens/home.png" width="280" />
+    <img src="https://github.com/user-attachments/assets/001dcea6-183a-4688-865a-c53561c85ef1" width="280" />
     <br><em>Home – Dynamic Product Grid</em>
   </kbd>
 </p>
