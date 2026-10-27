@@ -3,8 +3,18 @@ import 'package:myshop/ui/text.dart';
 
 import '../../constants/colors.dart';
 
+/// Onglets Description / How to use / Review de la fiche produit.
 class SectionDetail extends StatefulWidget {
-  const SectionDetail({Key? key}) : super(key: key);
+  final String description;
+  final double rating;
+  final int reviews;
+
+  const SectionDetail({
+    super.key,
+    required this.description,
+    required this.rating,
+    required this.reviews,
+  });
 
   @override
   State<SectionDetail> createState() => _SectionDetailState();
@@ -15,55 +25,59 @@ class _SectionDetailState extends State<SectionDetail> {
 
   final List<String> options = ['Description', 'How to use', 'Review'];
 
-  final List<Widget> contents = [
-    Text('Ceci est la description du produit.'),
-    Text('Voici comment utiliser ce produit.'),
-    Text('Avis des utilisateurs sur ce produit.'),
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(options.length, (index) {
-            final isSelected = selectedIndex == index;
-            return GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: Column(
-                children: [
-                  Container(
-                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: TextWidget(
-                      options[index],
-                      style: TextStyle(
-                        fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                        color: isSelected ? AppColors.primary: Colors.black54,
-                        fontSize: 14,
+    final contents = [
+      widget.description,
+      'Free delivery in 48 h and free returns within 30 days. Check the size guide before ordering.',
+      '${widget.rating} out of 5, based on ${widget.reviews} verified reviews.',
+    ];
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: List.generate(options.length, (index) {
+              final isSelected = selectedIndex == index;
+              return Padding(
+                padding: const EdgeInsets.only(right: 24),
+                child: GestureDetector(
+                  onTap: () => setState(() => selectedIndex = index),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextWidget(
+                        options[index],
+                        style: TextStyle(
+                          fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+                          color: isSelected ? AppColors.primary : Colors.black54,
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
+                      const SizedBox(height: 6),
+                      Container(
+                        height: 3,
+                        width: 32,
+                        decoration: BoxDecoration(
+                          color: isSelected ? AppColors.primary : Colors.transparent,
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 3,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: isSelected ? AppColors.primary : Colors.transparent,
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                  ),
-                ],
-              ),
-            );
-          }),
-        ),
-        const SizedBox(height: 16),
-        contents[selectedIndex],
-      ],
+                ),
+              );
+            }),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            contents[selectedIndex],
+            style: const TextStyle(fontSize: 14, height: 1.5, color: Colors.black87),
+          ),
+        ],
+      ),
     );
   }
 }

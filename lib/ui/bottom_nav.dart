@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../constants/colors.dart';
 import '../screens/favorite/favorite.dart';
 import '../screens/home/home.dart';
@@ -61,29 +60,29 @@ class _BottomNavBarState extends State<BottomNavBar> {
               tabs: [
                 GButton(
                   icon: _selectedIndex == 0
-                      ? MdiIcons.home
-                      : MdiIcons.homeOutline,
+                      ? Icons.home_rounded
+                      : Icons.home_outlined,
                   iconSize: 26,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
                 GButton(
                   icon: _selectedIndex == 1
-                      ? MdiIcons.cart
-                      : MdiIcons.cartOutline,
+                      ? Icons.shopping_bag
+                      : Icons.shopping_bag_outlined,
                   iconSize: 26,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
                 GButton(
                   icon: _selectedIndex == 2
-                      ? MdiIcons.heart
-                      : MdiIcons.heartOutline,
+                      ? Icons.favorite_rounded
+                      : Icons.favorite_border_rounded,
                   iconSize: 26,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
                 GButton(
                   icon: _selectedIndex == 3
-                      ? MdiIcons.account
-                      : MdiIcons.accountOutline,
+                      ? Icons.person_rounded
+                      : Icons.person_outline_rounded,
                   iconSize: 26,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),

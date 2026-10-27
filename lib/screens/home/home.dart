@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myshop/constants/colors.dart';
+import 'package:myshop/data/products.dart';
 import 'package:myshop/ui/text.dart';
 
 import '../../ui/category_circle.dart';
@@ -14,14 +15,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController searchController = TextEditingController();
-
-    // Données temporaires pour les produits
-    final products = [
-      {'image': 'assets/images/categories/shoes.jpg', 'price': '\$100', 'name': 'Running Shoes'},
-      {'image': 'assets/images/categories/bag.jpeg', 'price': '\$80', 'name': 'Leather Bag'},
-      {'image': 'assets/images/categories/headphone.jpg', 'price': '\$120', 'name': 'Wireless Headphones'},
-      {'image': 'assets/images/categories/cosmetics.jpg', 'price': '\$60', 'name': 'Cosmetics Set'},
-    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -156,24 +149,16 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final product = products[index];
                   return ProductShow(
-                    imagePath: product['image']!,
-                    price: product['price']!,
-                    productName: product['name'],
-                    category: 'Women Cosmetic',
-                    rating: 4.5,
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        '/productDetail',
-                        arguments: {
-                          'imagePath': product['image'],
-                          'price': product['price'],
-                          'productName': product['name'],
-                          'category': 'Women Cosmetic',
-                          'rating': 4.5,
-                        },
-                      );
-                    },
+                    imagePath: product.image,
+                    price: product.priceLabel,
+                    productName: product.name,
+                    category: product.category,
+                    rating: product.rating,
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      '/productDetail',
+                      arguments: product.id,
+                    ),
                   );
                 },
               ),

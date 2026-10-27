@@ -12,6 +12,7 @@ class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Mon Application',
       theme: ThemeData(
         primarySwatch: Colors.blue,

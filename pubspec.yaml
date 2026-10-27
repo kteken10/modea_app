@@ -33,7 +33,6 @@ dependencies:
   onboarding: ^4.0.2  
   font_awesome_flutter: ^10.7.0
   google_nav_bar: ^5.0.7
-  material_design_icons_flutter : ^7.0.7296
 
 
   # The following adds the Cupertino Icons font to your application.
