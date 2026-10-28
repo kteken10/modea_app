@@ -43,7 +43,7 @@ class StartScreen extends StatelessWidget {
             ),
           ),
 
-          // Texte "FASHION" positionné sur l'image
+          // Nom de la marque, en deux lignes, sur l'image
           Positioned(
             top: screenSize.height * 0.4, // Ajustez la position verticale
             left: 0,
@@ -52,9 +52,9 @@ class StartScreen extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Première ligne : FAS
+                  // Première ligne : MOD
                   const Text(
-                    "FAS",
+                    "MOD",
                     style: TextStyle(
                       fontSize: 140, // Taille du texte
                       fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class StartScreen extends StatelessWidget {
                        letterSpacing: 20.0, // Espacement horizontal des lettres
                     ),
                   ),
-                  // Deuxième ligne : HION
+                  // Deuxième ligne : ÉA
                   RichText(
                     text: const TextSpan(
                       style: TextStyle(
@@ -73,16 +73,12 @@ class StartScreen extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: "H",
+                          text: "É",
                           style: TextStyle(color: AppColors.primary), // Orange
                         ),
                         TextSpan(
-                          text: "IO",
+                          text: "A",
                           style: TextStyle(color: Colors.white), // Blanc
-                        ),
-                        TextSpan(
-                          text: "N",
-                          style: TextStyle(color: AppColors.primary), // Orange
                         ),
                       ],
                     ),

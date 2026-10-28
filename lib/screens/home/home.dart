@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             const Expanded(
               child: Center(
                 child: Text(
-                  'Shop',
+                  'Modéa',
                   style: TextStyle(
                     color: AppColors.ternary,
                     fontSize: 20,

@@ -1,13 +1,13 @@
-# My Shop
+# Modéa
 
-<p align="center"><img src="docs/banner.png" alt="My Shop: e-commerce app built with Flutter" width="100%"></p>
+<p align="center"><img src="docs/banner.png" alt="Modéa: fashion e-commerce app built with Flutter" width="100%"></p>
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
 ![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-0A2540)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-A Flutter e-commerce app: onboarding, product catalog, product pages, favorites and cart.
+A Flutter fashion e-commerce app: onboarding, product catalog, product pages, favorites and cart.
 
 ## Screens
 

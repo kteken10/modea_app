@@ -13,7 +13,7 @@ class RootScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mon Application',
+      title: 'Modéa',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
