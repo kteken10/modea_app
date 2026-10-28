@@ -28,7 +28,10 @@ class _SizeSelectorState extends State<SizeSelector> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    // Pastille ronde pour une taille courte (S, 42), pilule pour un mot (Black).
+    return Wrap(
+      spacing: 0,
+      runSpacing: 10,
       children: widget.sizes.map((size) {
         final bool isSelected = size == selectedSize;
         return GestureDetector(
@@ -42,22 +45,25 @@ class _SizeSelectorState extends State<SizeSelector> {
           },
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 6),
-            width: 40,
             height: 40,
+            constraints: const BoxConstraints(minWidth: 40),
+            padding: EdgeInsets.symmetric(horizontal: size.length > 2 ? 14 : 0),
             decoration: BoxDecoration(
               color: isSelected ? AppColors.primary : Colors.white,
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(20),
               border: Border.all(
                 color: isSelected ? AppColors.primary : Colors.grey.shade300,
                 width: 2,
               ),
             ),
-            alignment: Alignment.center,
-            child: Text(
-              size,
-              style: TextStyle(
-                color: isSelected ? Colors.white : Colors.black,
-                fontWeight: FontWeight.bold,
+            child: Center(
+              widthFactor: 1,
+              child: Text(
+                size,
+                style: TextStyle(
+                  color: isSelected ? Colors.white : Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
