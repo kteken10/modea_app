@@ -1,130 +1,70 @@
-# 🛍️ **Flutter Multi-Vendor E-Commerce App**
+# My Shop
 
-This project is a **mobile e-commerce platform** built with **Flutter** and powered by a **Flask backend**, supporting **multiple vendors** and designed for **scalability and real-world use cases**.
+<p align="center"><img src="docs/banner.png" alt="My Shop: e-commerce app built with Flutter" width="100%"></p>
 
----
+![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
+![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-0A2540)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-## ⚙️ **Features Overview**
+A Flutter e-commerce app: onboarding, product catalog, product pages, favorites and cart.
 
-### 📱 Frontend – Flutter
-- 🚀 Smooth **onboarding experience**
-- 🔐 **User authentication** (Sign up & Login)
-- 🏠 **Dynamic home screen** with real-time product listing
-- 🛒 **Product details page** with full info (title, price, description, etc.)
-- 📦 **Category-based navigation** *(in progress)*
-- 💳 **Shopping cart and checkout** *(coming soon)*
+## Screens
 
-### 🧠 Backend – Flask + ORM
-- 🔌 **RESTful API** to manage:
-  - 🛍️ Products
-  - 🧾 Categories
-  - 🎯 Promotions
-  - 👥 Users
-- 🧱 Structured with **extensibility in mind** for:
-  - 🧑‍💼 Vendor accounts
-  - 🧾 Order & Inventory management
-  - 💵 Payment gateway integration
+<p align="center"><img src="docs/tour.gif" width="260" alt="Tour of the app: onboarding, home, product, favorites, cart, profile"></p>
 
----
+| Onboarding | Home | Product |
+|:---:|:---:|:---:|
+| <img src="docs/screens/onboarding.png" width="160" alt="Onboarding screen"> | <img src="docs/screens/home.png" width="160" alt="Home screen"> | <img src="docs/screens/product.png" width="160" alt="Product screen"> |
 
-## 🛠️ **Tech Stack**
+| Favorites | Cart | Profile |
+|:---:|:---:|:---:|
+| <img src="docs/screens/favorites.png" width="160" alt="Favorites screen"> | <img src="docs/screens/cart.png" width="160" alt="Cart screen"> | <img src="docs/screens/profile.png" width="160" alt="Profile screen"> |
 
-| Layer       | Technology                    |
-|-------------|-------------------------------|
-| Frontend    | Flutter (Dart)                |
-| Backend     | Flask (Python)                |
-| Database    | PostgreSQL / SQLite (ORM)     |
-| API Format  | REST                          |
-| State Mgmt  | setState / Provider *(temp)*  |
+## Features
 
----
+- **Onboarding**: introduction slides on first launch.
+- **Sign in and sign up**: forms with social sign-in buttons.
+- **Catalog**: search, category filters, promotional banner and top-selling products.
+- **Product page**: rating, description, usage and reviews tabs, size selection, add to cart.
+- **Cart**: quantities, promo code, order summary and checkout, with a payment confirmation screen.
+- **Favorites**: products saved for later.
+- **Profile**: orders, shipping addresses, payment methods and notification settings.
 
-## 🚀 **Getting Started**
+## Tech stack
 
-### ✅ Prerequisites
-
-- Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
-- Python 3.10+ with `pip`
-
----
-
-### 💻 Installation Steps
-
+- Flutter, Dart
+- [google_nav_bar](https://pub.dev/packages/google_nav_bar), [onboarding](https://pub.dev/packages/onboarding), [flutter_svg](https://pub.dev/packages/flutter_svg), [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 
 ```
+lib/
+├── constants/    colors, text styles
+├── data/         product catalog
+├── navigation/   bottom navigation
+├── screens/      start, auth, home, shop, product_detail, favorite, profile
+└── ui/           reusable widgets
+```
 
-#### Frontend
+## Getting started
 
 ```bash
-# Clone the repo
-cd flutter_shop_app/
 flutter pub get
 flutter run
 ```
 
----
+## Status and roadmap
 
-## 📸 **App Screenshots Preview**
+The catalog is local (`lib/data/products.dart`). Next steps:
 
-<p align="center">
-  <kbd>
-    <img src="https://github.com/user-attachments/assets/00dda18f-eaa0-4449-aeac-be1bc5a1ed5a" width="280" />
-    <br><em>Onboarding</em>
-  </kbd>
-  &nbsp;&nbsp;&nbsp;
-  <kbd>
-    <img src="https://github.com/user-attachments/assets/001dcea6-183a-4688-865a-c53561c85ef1" width="280" />
-    <br><em>Home – Dynamic Product Grid</em>
-  </kbd>
-</p>
+- [ ] REST API for products, accounts and orders
+- [ ] Real payment integration
+- [ ] Order tracking
 
-<p align="center">
-  <kbd>
-    <img src="https://github.com/user-attachments/assets/1b92135e-91a7-4ac3-b7d6-a227a8fc753b" width="280" />
-    <br><em>Auth Screen</em>
-  </kbd>
-  &nbsp;&nbsp;&nbsp;
-<!--   <kbd>
-    <img src="assets/screens/auth.png" width="280" />
-    <br><em>Login & Registration</em>
-  </kbd> -->
-</p>
+## License
 
----
+MIT, see [LICENSE](LICENSE).
 
-## 🧩 **Project Architecture**
+## Author
 
-```
-ecommerce_app/
-│
-├── frontend/ (Flutter)
-│   ├── lib/
-│   ├── assets/
-│   └── pubspec.yaml
-
-
----
-
-## 🤝 **Contributing**
-
-Feel free to fork the project, submit issues, or suggest new features. Pull requests are welcome.
-
----
-
-## 📜 License
-
-Licensed under the **MIT License**. See [LICENSE](LICENSE) for more info.
-
----
-
-## 📞 Contact
-
-📧 Email: dissangfrancis@yahoo.com  
-🌐 Portfolio: [dissangkevin.online](https://dissangkevin.online)  
-🐙 GitHub: [github.com/kteken10](https://github.com/kteken10)
-
----
-
-## 🏷️ Tags
-
-`#Flutter` `#Flask` `#FullStackDev` `#EcommerceApp` `#MultiVendor` `#MobileDevelopment` `#Dart` `#PythonAPI`
+**Dissang Kevin** · Mobile AI Engineer
+[Portfolio](https://dissangkevin.work) · [GitHub](https://github.com/kteken10)
